@@ -132,6 +132,7 @@ a:hover {
     align-items: center;
     width: 130px;
     height: 220px;
+    background-color: #11111133;
     justify-content: space-between;
     border: 1px solid goldenrod;
     border-radius: 5px;
@@ -178,6 +179,8 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid salmon;
     margin: 10px 10px;
 }
 .row-img{
@@ -203,4 +206,91 @@ button:hover{
 .fa-trash:hover{
     cursor: pointer;
     color: #333;
+}
+
+/* media query */
+
+@media (max-width: 1140px) {
+    #root{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #root{
+        grid-template-columns: repeat(2, 1fr);
+        transition: all 1s;
+    }
+    .cart-item{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid salmon;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #myHeader{
+        display: none;
+    }
+    #root{
+        grid-template-columns: repeat(1, 1fr);
+        transition: all 1s;
+    }
+    #root:hover{
+        transform: scale(1.05);
+    }
+    .slidebar{
+        display: none;
+    }
+    .box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 300px;
+        height: 100px;
+    }
+    p{
+        padding: 10px 0px;
+    }
+    button{
+        width: 150px;
+        top: 5%;
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 320px) {
+    nav{
+        display: none;
+    }
+    #root{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #root:hover{
+        transform: scale(1.05);
+    }
+    .slidebar{
+        display: none;
+    }
+    .box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+    }
+    h2{
+        font-size: 12px;
+    }
+    p{
+        font-size: 12px;
+        padding: 10px 0px;
+    }
+    button{
+        top: 25%;
+        width: 80px;
+        font-size: 10px;
+        margin: 10px 0px;
+    }
 }
